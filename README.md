@@ -1,4 +1,4 @@
 # alphaProject
 Alpha project
 
-By Florian Martin
+By Florian Martin and Damien Crozemarie
