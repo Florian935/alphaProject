@@ -1,4 +1,6 @@
+import { ProgramService } from './services/program.service';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-program',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgramComponent implements OnInit {
 
-  constructor() { }
+  nbSessionForm: FormGroup;
+
+  constructor(private programService: ProgramService) { }
 
   ngOnInit() {
+    this.nbSessionForm = this.programService.initNbSessionForm();
   }
 
+  onSelectNbSession(): void {
+    console.log(this.nbSessionForm.value);
+  }
 }
