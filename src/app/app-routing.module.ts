@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: './documentation/documentation.module#DocumentationModule'
   },
   {
+    path: 'subscription',
+    loadChildren: './subscription/subscription.module#SubscriptionModule'
+  },
+  {
     path: '**', redirectTo: 'home'
   }
 ];
