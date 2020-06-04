@@ -1,11 +1,23 @@
-import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
   {
-    path: 'home', component: AppComponent
+    path: 'accueil',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'programme',
+    loadChildren: './program/program.module#ProgramModule'
+  },
+  {
+    path: 'objectif',
+    loadChildren: './goal/goal.module#GoalModule'
+  },
+  {
+    path: 'documentation',
+    loadChildren: './documentation/documentation.module#DocumentationModule'
   },
   {
     path: '**', redirectTo: 'home'

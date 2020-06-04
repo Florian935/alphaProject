@@ -1,0 +1,17 @@
+.program-container {
+  width: 90%;
+  background-color: whitesmoke;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.method-generate-program {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 7px;
+  }
+}
