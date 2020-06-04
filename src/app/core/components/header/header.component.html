@@ -1,10 +1,11 @@
 <div>
 
-  <mat-toolbar>
-    <button matButton mat-raised-button>Accueil</button>
-    <button matButton mat-raised-button>Programme</button>
-    <button matButton mat-raised-button>Objectif</button>
-    <button matButton mat-raised-button>Documentation</button>
+  <mat-toolbar class="mat-elevation-z2">
+    <button matButton mat-raised-button [routerLink]="['/accueil']">Accueil</button>
+    <button matButton mat-raised-button [routerLink]="['/programme']">Programme</button>
+    <button matButton mat-raised-button [routerLink]="['/objectif']">Objectif</button>
+    <button matButton mat-raised-button [routerLink]="['/documentation']">Documentation</button>
     <span class="fill-remaining-space"></span>
-    <button matButton mat-raised-button color="primary">Sign in</button>
+    <button matButton mat-raised-button color="primary">Se connecter</button>
+    <button matButton mat-raised-button color="primary">S'enregistrer</button>
   </mat-toolbar>
