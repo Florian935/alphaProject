@@ -1,10 +1,9 @@
 <div>
-
   <mat-toolbar class="mat-elevation-z2">
-    <button matButton mat-raised-button [routerLink]="['/accueil']">Accueil</button>
-    <button matButton mat-raised-button [routerLink]="['/programme']">Programme</button>
-    <button matButton mat-raised-button [routerLink]="['/objectif']">Objectif</button>
-    <button matButton mat-raised-button [routerLink]="['/documentation']">Documentation</button>
+    <button matButton mat-raised-button routerLinkActive="active" [routerLink]="['/accueil']">Accueil</button>
+    <button matButton mat-raised-button routerLinkActive="active" [routerLink]="['/programme']">Programme</button>
+    <button matButton mat-raised-button routerLinkActive="active" [routerLink]="['/objectif']">Objectif</button>
+    <button matButton mat-raised-button routerLinkActive="active" [routerLink]="['/documentation']">Documentation</button>
     <span class="fill-remaining-space"></span>
     <button matButton mat-raised-button color="primary">Se connecter</button>
     <button matButton mat-raised-button color="primary" [routerLink]="['/subscription']">S'enregistrer</button>

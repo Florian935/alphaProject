@@ -1,8 +1,28 @@
 <div class="program-container mat-elevation-z4">
   <h1 class="main-title">Programme</h1>
-  <div class="method-generate-program">
-    <button matButton mat-raised-button routerLink="personnel">Créer un programme</button>
-    <button matButton mat-raised-button routerLink="automatique">Générer un programme</button>
-  </div>
-  <router-outlet></router-outlet>
-</div>
+  <h3>1. Prérequis: </h3>
+  <form [formGroup]="nbSessionForm">
+    <mat-form-field>
+      <mat-label>Nombre de séances</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="entre 1 et 7"
+        formControlName="session"
+        matTooltip="Choississez un nombre de séances (compris entre 1 et 7)">
+      <mat-error>
+        Ce champ est obligatoire
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <br><br>
+  <ng-container *ngIf="nbSessionForm.valid">
+    <h3>2. Création du programme: </h3>
+    <br><br>
+    <div class="method-generate-program">
+      <button matButton mat-raised-button routerLinkActive="active" routerLink="personnel">Créer un programme</button>
+      <button matButton mat-raised-button routerLinkActive="active" routerLink="automatique">Générer un
+        programme</button>
+    </div>
+    <router-outlet></router-outlet>
+  </ng-container>
