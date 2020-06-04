@@ -1,0 +1,30 @@
+<!-- <app-guestHeader></app-guestHeader> -->
+
+<h1 class="main-title">
+    Welcome to Alpha Project
+</h1>
+<form>
+    <div class="id-field">
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Identifiant</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="button-connect">
+        <button mat-raised-button>Connect</button>
+    </div>
+</form>
+<!-- <app-identification></app-identification> -->
