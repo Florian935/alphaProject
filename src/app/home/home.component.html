@@ -3,28 +3,28 @@
     <h1 class="main-title">
         Bienvenu dans le Projet Alpha
     </h1>
-    <form>
+    <form class="sub-form" [formGroup]="connectForm" (ngSubmit)="login()">
         <div class="id-field">
             <div>
                 <mat-form-field appearance="outline">
                     <mat-label>Votre identifiant</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="id">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field appearance="outline">
                     <mat-label>Votre mot de passe</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
 
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
+                    </button> -->
                 </mat-form-field>
             </div>
         </div>
         <div class="button-connect">
-            <button mat-raised-button>Connexion</button>
+            <button mat-raised-button type="submit">Connexion</button>
         </div>
     </form>
 </div>

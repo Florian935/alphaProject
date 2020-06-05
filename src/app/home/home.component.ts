@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-home',
@@ -8,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   
   hide = true;
-  constructor() { }
+  connectForm: FormGroup;
+
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.connectForm = this.fb.group({
+        id: [],
+        password: []
+    });
+  }
+
+  login() {
+    console.log('Données du formulaire...', this.connectForm.value);
   }
 
   
