@@ -14,4 +14,9 @@ export class HttpService {
   testApi() {
     return this.http.get<any>(`${this.apiUrl}/users/1`);
   }
+
+  postUser($newUser) {
+    return (this.http.post<any>(`${this.apiUrl}/users`, $newUser));
+  }
+
 }

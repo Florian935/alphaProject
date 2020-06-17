@@ -11,13 +11,12 @@ import { FormGroup } from '@angular/forms';
 export class ProgramComponent implements OnInit {
 
   nbSessionForm: FormGroup;
-  test;
 
   constructor(private programService: ProgramService, private http: HttpService) { }
 
   ngOnInit() {
     this.nbSessionForm = this.programService.initNbSessionForm();
-    this.test = this.http.testApi().subscribe(
+    this.http.testApi().subscribe(
       (value) => console.log(value)
       );
   }
