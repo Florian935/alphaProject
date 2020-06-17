@@ -11,7 +11,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [SubscriptionComponent],
+  declarations: [
+    SubscriptionComponent
+  ],
   imports: [
     CommonModule,
     SubscriptionRoutingModule,

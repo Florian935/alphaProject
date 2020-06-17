@@ -15,10 +15,10 @@ export class SubscriptionComponent implements OnInit {
   subscribeForm: FormGroup;
 
 
-  constructor(private fb: FormBuilder, private http: HttpService, private subscription: SubscriptionService) { }
+  constructor(private http: HttpService, private subscriptionService: SubscriptionService) { }
 
   ngOnInit() {
-    this.subscribeForm = this.subscription.initSubcriptionUserForm();
+    this.subscribeForm = this.subscriptionService.initSubcriptionUserForm();
   }
 
   login() {
