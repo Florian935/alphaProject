@@ -15,13 +15,17 @@ export class SubscriptionComponent implements OnInit {
   ngOnInit() {
 
     this.subscribeForm = this.fb.group({
-      firstname: [],
-      lastname: [],
-      email: []
+      firstName: [],
+      lastName: [],
+      email: [],
+      password: [],
+      pseudo: [],
     });
   }
 
   login() {
     console.log('Données du formulaire...', this.subscribeForm.value);
+
+
   }
 }
