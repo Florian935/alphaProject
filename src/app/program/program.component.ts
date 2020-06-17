@@ -14,11 +14,11 @@ export class ProgramComponent implements OnInit {
   nbSessionForm: FormGroup;
   user: User;
 
-  constructor(private programService: ProgramService, private http: HttpService) { }
+  constructor(private _programService: ProgramService, private _httpService: HttpService) { }
 
   ngOnInit() {
-    this.nbSessionForm = this.programService.initNbSessionForm();
-    this.http.getUser(1).subscribe(
+    this.nbSessionForm = this._programService.initNbSessionForm();
+    this._httpService.getUser(1).subscribe(
       (user: User) => {
         console.log(user);
         this.user = user;

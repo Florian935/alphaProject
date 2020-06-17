@@ -24,6 +24,14 @@ const routes: Routes = [
     loadChildren: './subscription/subscription.module#SubscriptionModule'
   },
   {
+    path: 'sign-in',
+    loadChildren: './sign-in/sign-in.module#SignInModule'
+  },
+  {
+    path: 'profil',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  },
+  {
     path: '**', redirectTo: 'home'
   }
 ];

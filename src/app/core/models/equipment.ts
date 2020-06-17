@@ -1,4 +1,5 @@
 import { Exercise } from './exercise';
+
 export class Equipment {
 
   id: number;

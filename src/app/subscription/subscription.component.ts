@@ -15,14 +15,14 @@ export class SubscriptionComponent implements OnInit {
   subscribeForm: FormGroup;
 
 
-  constructor(private http: HttpService, private subscriptionService: SubscriptionService) { }
+  constructor(private _httpService: HttpService, private _subscriptionService: SubscriptionService) { }
 
   ngOnInit() {
-    this.subscribeForm = this.subscriptionService.initSubcriptionUserForm();
+    this.subscribeForm = this._subscriptionService.initSubcriptionUserForm();
   }
 
   login() {
-    this.http.postUser(this.subscribeForm.value).subscribe(
+    this._httpService.postUser(this.subscribeForm.value).subscribe(
       (value) => console.log(value)
     );
 

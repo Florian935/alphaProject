@@ -1,5 +1,6 @@
 import { Muscle } from './muscle';
 import { User } from './user';
+
 export class MedicHistories {
 
   id: number;

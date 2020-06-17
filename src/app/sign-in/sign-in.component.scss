@@ -1,0 +1,56 @@
+.sign-in-container {
+  width: 23%;
+  height: 50%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 18px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  mat-form-field {
+    width: 90%;
+  }
+
+  .login {
+    font-size: 13px;
+    width: 55%;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  mat-checkbox {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+.account-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .create-account {
+    margin: auto;
+  }
+}

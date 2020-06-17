@@ -4,6 +4,7 @@ import { MedicHistories } from './medic-histories';
 import { Role } from './role';
 import { Measurement } from './measurement';
 import { Goal } from './goal';
+
 export class User {
 
   id: number;
