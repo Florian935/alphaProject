@@ -1,8 +1,8 @@
-import { User } from './../core/models/user';
-import { HttpService } from './../core/services/http.service';
-import { ProgramService } from './services/program.service';
+import { User } from '@core/models/user';
+import { HttpService } from '@core/services/http.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { ProgramService } from './services/program.service';
 
 @Component({
   selector: 'app-program',
