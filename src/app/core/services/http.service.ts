@@ -16,4 +16,9 @@ export class HttpService {
   getUser(id: number): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/sessions/${id}`);
   }
+
+  postUser($newUser) {
+    return (this.http.post<any>(`${this.apiUrl}/users`, $newUser));
+  }
+
 }
