@@ -1,6 +1,6 @@
+import { SubscriptionService } from './services/subscription.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-
 import { HttpService } from './../core/services/http.service';
 
 
@@ -11,22 +11,14 @@ import { HttpService } from './../core/services/http.service';
 })
 export class SubscriptionComponent implements OnInit {
 
-  subscribeForm: FormGroup;
   hide = true;
+  subscribeForm: FormGroup;
 
 
-  constructor(private fb: FormBuilder, private http: HttpService) { }
+  constructor(private fb: FormBuilder, private http: HttpService, private subscription: SubscriptionService) { }
 
   ngOnInit() {
-
-    this.subscribeForm = this.fb.group({
-      firstName: [],
-      lastName: [],
-      email: [],
-      password: [],
-      pseudo: [],
-    });
-
+    this.subscribeForm = this.subscription.initSubcriptionUserForm();
   }
 
   login() {
