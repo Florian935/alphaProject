@@ -10,11 +10,11 @@ export class SubscriptionComponent implements OnInit {
 
   subscribeForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
 
-    this.subscribeForm = this.fb.group({
+    this.subscribeForm = this.formBuilder.group({
       firstname: [],
       lastname: [],
       email: []
