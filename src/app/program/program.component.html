@@ -3,13 +3,13 @@
   <h3>1. Prérequis: </h3>
   <form [formGroup]="nbSessionForm">
     <mat-form-field>
-      <mat-label>Nombre de séances</mat-label>
+      <mat-label>Nombre de séances/sem</mat-label>
       <input
         type="text"
         matInput
         placeholder="entre 1 et 7"
         formControlName="session"
-        matTooltip="Choississez un nombre de séances (compris entre 1 et 7)">
+        matTooltip="Choississez un nombre de séances par semaine (compris entre 1 et 7)">
       <mat-error>
         Ce champ est obligatoire
       </mat-error>

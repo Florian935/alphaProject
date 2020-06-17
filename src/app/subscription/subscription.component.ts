@@ -26,6 +26,6 @@ export class SubscriptionComponent implements OnInit {
   login() {
     console.log('Données du formulaire...', this.subscribeForm.value);
 
-
   }
+
 }

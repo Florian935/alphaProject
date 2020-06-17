@@ -1,3 +1,4 @@
+import { HttpService } from './../core/services/http.service';
 import { ProgramService } from './services/program.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
@@ -10,11 +11,15 @@ import { FormGroup } from '@angular/forms';
 export class ProgramComponent implements OnInit {
 
   nbSessionForm: FormGroup;
+  test;
 
-  constructor(private programService: ProgramService) { }
+  constructor(private programService: ProgramService, private http: HttpService) { }
 
   ngOnInit() {
     this.nbSessionForm = this.programService.initNbSessionForm();
+    this.test = this.http.testApi().subscribe(
+      (value) => console.log(value)
+      );
   }
 
   onSelectNbSession(): void {
