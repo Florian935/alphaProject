@@ -1,3 +1,4 @@
+import { SubscriptionService } from './services/subscription.service';
 import { MatButtonModule } from '@angular/material/button';
 import { SubscriptionComponent } from './subscription.component';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+  ],
+  providers: [
+    SubscriptionService,
   ]
 })
 export class SubscriptionModule { }
