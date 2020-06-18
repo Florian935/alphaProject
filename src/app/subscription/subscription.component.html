@@ -1,8 +1,14 @@
 <form class="sub-form" [formGroup]="subscribeForm" (ngSubmit)="login()">
+
     <div class="form-group">
         <mat-form-field appearance="outline">
             <mat-label>Votre prenom</mat-label>
-            <input matInput formControlName="firstName">
+            <input matInput formControlName="firstName" required>
+            <div *ngIf="(subscribeForm.get('firstName').touched 
+            || subscribeForm.get('firstName').dirty) && 
+            subscribeForm.get('firstName').errors" class="alert alert-danger">
+                <mat-error *ngIf="subscribeForm.get('firstName').errors.required">Champ requis.</mat-error>
+            </div>
         </mat-form-field>
     </div>
 
@@ -12,7 +18,7 @@
             <input matInput formControlName="lastName">
         </mat-form-field>
     </div>
-   
+
     <div class="form-group">
         <mat-form-field appearance="outline">
             <mat-label>Votre pseudo</mat-label>
@@ -31,10 +37,10 @@
         <mat-form-field appearance="outline">
             <mat-label>Votre mot de passe</mat-label>
             <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-            
+
         </mat-form-field>
     </div>
-    
 
-    <button matButton mat-raised-button type="submit">envoyé</button>
+
+    <button matButton mat-raised-button [disabled]="!subscribeForm.valid" type="submit">envoyé</button>
 </form>

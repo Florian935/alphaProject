@@ -9,11 +9,30 @@ export class SubscriptionService {
   initSubcriptionUserForm(): FormGroup {
 
     return this.formBuilder.group({
-      firstName: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
-      email: ['', [Validators.required]],
-      password: ['', [Validators.required]],
-      pseudo: ['', [Validators.required]],
+      firstName: ['',
+        [
+          Validators.required,
+        ]
+      ],
+      lastName: ['',
+        [
+          Validators.required
+        ]
+      ],
+      email: ['',
+        [
+          Validators.required
+        ]
+      ],
+      password: ['',
+        [
+          Validators.required
+        ]
+      ],
+      pseudo: ['',
+        [
+          Validators.required
+        ]],
     });
   }
 

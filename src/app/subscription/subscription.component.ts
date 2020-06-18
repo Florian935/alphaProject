@@ -24,9 +24,10 @@ export class SubscriptionComponent implements OnInit {
   login() {
     this._httpService.postUser(this.subscribeForm.value).subscribe(
       (value) => console.log(value)
-    );
-
-    console.log('Données du formulaire...', this.subscribeForm.value);
-
-  }
+      );
+      
+      console.log('Données du formulaire...', this.subscribeForm.value);
+      
+    }
+    
 }
